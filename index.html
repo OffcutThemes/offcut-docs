@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Offcut theme documentation</title>
+<meta name="description" content="Documentation for the Offcut Shopify theme: installation, sections, collections, products, languages.">
+<style>
+:root{--bg:#fff;--fg:#111;--line:#d9d9d9;--mute:#555}
+@media(prefers-color-scheme:dark){:root{--bg:#111;--fg:#f2f2f2;--line:#333;--mute:#aaa}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 Inter,system-ui,Arial,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 80px}
+nav{display:flex;gap:8px;margin:0 0 24px}
+nav button{font:inherit;padding:8px 16px;border:1px solid var(--fg);background:var(--bg);color:var(--fg);cursor:pointer;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+nav button[aria-pressed=true]{background:var(--fg);color:var(--bg)}
+h1{font-size:2rem;letter-spacing:.06em;text-transform:uppercase;margin:.2em 0 .6em}
+h2{font-size:1.25rem;margin:2.2em 0 .6em;padding-top:.6em;border-top:1px solid var(--line);letter-spacing:.04em}
+h3{font-size:1.05rem;margin:1.6em 0 .4em}
+a{color:inherit}
+table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+code{background:rgba(127,127,127,.15);padding:1px 5px;font-size:.9em}
+[hidden]{display:none}
+</style></head><body><main>
+<nav aria-label="Language"><button type="button" data-l="en" aria-pressed="true">English</button><button type="button" data-l="sk" aria-pressed="false">Slovenčina</button></nav>
+<div id="en"><h1 id="offcut-documentation-english">Offcut – Documentation (English)</h1>
+<p>Offcut is a minimalist clothing-store theme for Shopify Online Store 2.0: black and white, sharp corners, thin lines. Based on Dawn (Shopify, MIT licence, see LICENSE.md). Slovenská verzia: DOKUMENTACIA.md.</p>
+<h2 id="1-installation">1. Installation</h2>
+<ol>
+<li>Online Store → Themes → Add theme → Upload zip file → choose the Offcut zip.</li>
+<li>Click ⋯ next to the theme → <strong>Preview</strong> to look at it first. Click <strong>Publish</strong> when you are happy.</li>
+<li>Click <strong>Customize</strong> to edit. Everything below is done in the editor; no code is needed.</li>
+</ol>
+<h2 id="2-first-steps-30-minutes">2. First steps (30 minutes)</h2>
+<ol>
+<li>Theme settings → Logo: upload your logo, favicon.</li>
+<li>Theme settings → Colors and Typography: change if you wish (defaults are black/white, Jost/Inter).</li>
+<li>Products: add your products with photos, a Product type, Colour and Size options.</li>
+<li>Collections: create the collections you need (section 5).</li>
+<li>Content → Menus: build your main menu and footer menu.</li>
+<li>Replace the demo photos and texts in every section (section 4). Demo texts are only examples.</li>
+<li>Settings → Languages: add the languages you sell in (section 9).</li>
+<li>Settings → Policies: fill in Shipping, Refund, Privacy and Terms (Shopify shows them in the footer).</li>
+</ol>
+<h2 id="3-pages-and-templates">3. Pages and templates</h2>
+<p>Home, Collection, Collections list, Product, Cart, Search, Blog, Article, 404, Password, Gift card, and the pages <strong>About</strong>, <strong>Contact</strong>, <strong>FAQ</strong> (and a default page). To use About/Contact/FAQ: Content → Pages → create a page → Theme template → choose <code>page.about</code>, <code>page.contact</code> or <code>page.faq</code>.</p>
+<h2 id="4-sections-add-them-in-the-editor-with-add-section">4. Sections (add them in the editor with "Add section")</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it does</th>
+<th>What you edit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>Logo, menu, search, account, cart, Collection mega menu, Sale link</td>
+<td>menus, labels, collections shown in the Collection menu</td>
+</tr>
+<tr>
+<td>Announcement bar</td>
+<td>Thin bar above the header</td>
+<td>text, link</td>
+</tr>
+<tr>
+<td>Slideshow / Image banner</td>
+<td>Big hero</td>
+<td>images, text, buttons</td>
+</tr>
+<tr>
+<td>Editorial banner</td>
+<td>Large photo with text and a two-product bundle</td>
+<td>image, texts, 2 products, bundle button, optional discount code</td>
+</tr>
+<tr>
+<td>Collection picker</td>
+<td>Tiles that link to collections</td>
+<td>add/delete tiles: photo, title, small text, collection handle or tag, link</td>
+</tr>
+<tr>
+<td>Seasonal</td>
+<td>Row of photo tiles</td>
+<td>tiles: image, label, link</td>
+</tr>
+<tr>
+<td>Product tabs</td>
+<td>Product grid with tabs</td>
+<td>one tab per collection</td>
+</tr>
+<tr>
+<td>Featured collection</td>
+<td>Product grid from one collection</td>
+<td>collection, number of products</td>
+</tr>
+<tr>
+<td>Stories</td>
+<td>Short stories with photo, text and product link</td>
+<td>cover and stories</td>
+</tr>
+<tr>
+<td>Shop the look</td>
+<td>One photo with the products worn</td>
+<td>photo, products</td>
+</tr>
+<tr>
+<td>Featured blog / Journal</td>
+<td>Latest articles or a cover layout</td>
+<td>blog, cover photo, texts</td>
+</tr>
+<tr>
+<td>Contact form</td>
+<td>Contact form with topics and info rows</td>
+<td>topics, extra fields, info rows (address, hours, ...)</td>
+</tr>
+<tr>
+<td>Sale countdown</td>
+<td>Countdown in the Sale tab or always</td>
+<td>text, end date or hours</td>
+</tr>
+<tr>
+<td>Newsletter</td>
+<td>Email sign-up</td>
+<td>heading, text</td>
+</tr>
+<tr>
+<td>Others</td>
+<td>Rich text, Image with text, Multicolumn, Multirow, Collage, Video, FAQ (Collapsible content), Custom Liquid, Apps</td>
+<td>standard options</td>
+</tr>
+</tbody>
+</table>
+<p>Deleting a section: click it in the editor → bottom of its settings → <strong>Remove section</strong> (or hide it with the eye icon). Deleting a tile or block: click it → <strong>Remove block</strong>.</p>
+<h2 id="5-collections">5. Collections</h2>
+<ul>
+<li><strong>Create:</strong> Products → Collections → Create collection. Best: <em>Automated</em> with the condition "Product tag is equal to …" (for example <code>fall-2026</code>). Then adding that tag to a product adds it to the collection.</li>
+<li><strong>Show it on the shop:</strong> Collections page tile (Collection picker section), a header menu item (Content → Menus), the header Collection menu (below), Product tabs, Featured collection.</li>
+<li><strong>Collection page:</strong> the filters and sorting come from the Search &amp; Discovery app (section 8). The page shows the collection title, optional photo and a product grid. You can turn the collection photo on or off in the collection template.</li>
+</ul>
+<h3 id="header-collection-menu">Header "Collection" menu</h3>
+<ul>
+<li>First tab: Customize → Header → Collection menu (name, collection or tag, "view all" link).</li>
+<li>Second tab: Customize → Theme settings → <strong>Collection menu: second tab</strong> (show/hide, name, collection or tag).</li>
+<li>Clicking a tab name opens that collection page. On mobile the same tabs appear in the menu drawer.</li>
+</ul>
+<h2 id="6-products">6. Products</h2>
+<ul>
+<li><strong>Options:</strong> put <strong>Colour</strong> first and <strong>Size</strong> second. When a customer picks a colour, sizes that are sold out for that colour are crossed out.</li>
+<li><strong>Stock:</strong> for every variant tick <em>Track quantity</em>, untick <em>Continue selling when out of stock</em>, and set the quantity per location.</li>
+<li><strong>Photos per colour:</strong> upload photos, then assign a photo to each colour variant. Choosing the colour in the shop changes the main photo.</li>
+<li><strong>Product type:</strong> set it (for example Suit, Bag, Shoes). The Size guide uses it to choose a table.</li>
+<li><strong>Size guide:</strong> Customize → Product page → Size guide block. Choose a page with your own guide or use the built-in tables (edit rows: one per line, cells separated by <code>|</code>; you can hide it for some product types).</li>
+<li><strong>Sale price:</strong> fill "Compare-at price". Sale prices are shown in red with a Sale badge.</li>
+<li><strong>Tags:</strong> <code>women</code> and <code>men</code> drive the Women / Men switch (unisex products get both).</li>
+</ul>
+<h2 id="7-women-men-switch">7. Women / Men switch</h2>
+<p>Theme settings → Women / Men switch: on/off, the two tag names, and pages where a button is hidden (comma-separated collection handles or product types).</p>
+<h2 id="8-filters-and-search">8. Filters and search</h2>
+<p>Install the free <strong>Search &amp; Discovery</strong> app → Filters → add Availability, Price, Size, Colour, Product type etc. Filters appear on collection and search pages. Predictive search is under Theme settings → Search.</p>
+<h2 id="9-languages-and-translations">9. Languages and translations</h2>
+<ul>
+<li>Settings → Languages: add a language. Offcut includes English, Slovak, Czech, German, French, Italian and Spanish; other languages fall back to English.</li>
+<li>Your own texts (sections, products, menus) are translated in the <strong>Translate &amp; Adapt</strong> app.</li>
+<li>The example texts in the theme (contact page, stories, journal) are translated automatically in the 7 languages <strong>only while you leave them unchanged</strong>. When you change one, translate your new text in Translate &amp; Adapt.</li>
+</ul>
+<h2 id="10-other-settings">10. Other settings</h2>
+<ul>
+<li><strong>Country welcome window:</strong> Theme settings → Country welcome window.</li>
+<li><strong>Sale:</strong> Theme settings → Sale (collection with sale items; the red Sale link in the header).</li>
+<li><strong>Cart:</strong> Theme settings → Cart (drawer or page, vendor, order note).</li>
+<li><strong>Social media:</strong> Theme settings → Social media. <strong>Badges, Cards, Buttons, Inputs, Layout, Animations:</strong> matching groups in Theme settings.</li>
+</ul>
+<h2 id="11-troubleshooting">11. Troubleshooting</h2>
+<ul>
+<li><em>Header looks empty:</em> check the Header section has a logo or store name and a menu is selected.</li>
+<li><em>No photo in a tile:</em> demo photos are shown only for sample products. Upload your own photo.</li>
+<li><em>Sizes not crossed out:</em> see section 6 (Colour first, Track quantity on, Continue selling off).</li>
+<li><em>Collection missing from the Collection menu:</em> it must contain products; check its handle or tag.</li>
+<li><em>Text not translated:</em> see section 9.</li>
+</ul>
+<h2 id="12-support">12. Support</h2>
+<p>See the support link in Theme settings → theme information. We reply within 2 business days.</p>
+<h2 id="13-credits">13. Credits</h2>
+<p>Based on Dawn by Shopify (MIT). Fonts: Jost and Inter via Shopify. Photos in the demo are for demonstration only; replace them with your own.</p></div><div id="sk" hidden lang="sk"><h1 id="offcut-dokumentacia-slovencina">Offcut – Dokumentácia (Slovenčina)</h1>
+<p>Offcut je minimalistická téma pre obchod s oblečením na Shopify Online Store 2.0: čierna a biela, ostré rohy, tenké čiary. Vychádza z témy Dawn (Shopify, licencia MIT, pozri LICENSE.md). English version: DOCUMENTATION.md.</p>
+<h2 id="1-instalacia">1. Inštalácia</h2>
+<ol>
+<li>Online obchod → Témy → Pridať tému → Nahrať súbor zip → vyber zip Offcut.</li>
+<li>Pri téme klikni na ⋯ → <strong>Zobraziť ukážku</strong> (Preview). Keď ti vyhovuje, klikni na <strong>Publikovať</strong>.</li>
+<li>Klikni na <strong>Upraviť tému</strong> (Customize). Všetko nižšie sa robí v editore, kód netreba.</li>
+</ol>
+<h2 id="2-prve-kroky-30-minut">2. Prvé kroky (30 minút)</h2>
+<ol>
+<li>Nastavenia témy → Logo: nahraj logo a favicon.</li>
+<li>Nastavenia témy → Farby a Typografia: podľa chuti (predvolené je čierna/biela, Jost/Inter).</li>
+<li>Produkty: pridaj produkty s fotkami, typom produktu a možnosťami Farba a Veľkosť.</li>
+<li>Kolekcie: vytvor potrebné kolekcie (časť 5).</li>
+<li>Obsah → Ponuky: vytvor hlavné menu a menu v pätičke.</li>
+<li>Nahraď ukážkové fotky a texty v každej sekcii (časť 4). Ukážkové texty sú len príklady.</li>
+<li>Nastavenia → Jazyky: pridaj jazyky, v ktorých predávaš (časť 9).</li>
+<li>Nastavenia → Pravidlá: vyplň doručenie, vrátenie, súkromie a podmienky.</li>
+</ol>
+<h2 id="3-stranky-a-sablony">3. Stránky a šablóny</h2>
+<p>Úvodná, Kolekcia, Zoznam kolekcií, Produkt, Košík, Vyhľadávanie, Blog, Článok, 404, Heslo, Darčeková karta a stránky <strong>O nás</strong>, <strong>Kontakt</strong>, <strong>FAQ</strong> (a základná stránka). Použitie: Obsah → Stránky → vytvor stránku → Šablóna témy → <code>page.about</code>, <code>page.contact</code> alebo <code>page.faq</code>.</p>
+<h2 id="4-sekcie-pridavaju-sa-v-editore-cez-pridat-sekciu">4. Sekcie (pridávajú sa v editore cez „Pridať sekciu")</h2>
+<table>
+<thead>
+<tr>
+<th>Sekcia</th>
+<th>Čo robí</th>
+<th>Čo upravuješ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hlavička</td>
+<td>Logo, menu, vyhľadávanie, účet, košík, menu Kolekcia, odkaz Sale</td>
+<td>menu, názvy, kolekcie v menu Kolekcia</td>
+</tr>
+<tr>
+<td>Oznamovací pruh</td>
+<td>Tenký pruh nad hlavičkou</td>
+<td>text, odkaz</td>
+</tr>
+<tr>
+<td>Slideshow / Image banner</td>
+<td>Veľký úvodný obrázok</td>
+<td>obrázky, texty, tlačidlá</td>
+</tr>
+<tr>
+<td>Editorial banner</td>
+<td>Veľká fotka s textom a balíkom dvoch produktov</td>
+<td>obrázok, texty, 2 produkty, tlačidlo balíka, kód zľavy</td>
+</tr>
+<tr>
+<td>Collection picker</td>
+<td>Dlaždice odkazujúce na kolekcie</td>
+<td>pridať/zmazať dlaždice: fotka, názov, text, handle kolekcie alebo tag, odkaz</td>
+</tr>
+<tr>
+<td>Seasonal</td>
+<td>Rad fotodlaždíc</td>
+<td>dlaždice: obrázok, popis, odkaz</td>
+</tr>
+<tr>
+<td>Product tabs</td>
+<td>Mriežka produktov so záložkami</td>
+<td>jedna záložka = jedna kolekcia</td>
+</tr>
+<tr>
+<td>Featured collection</td>
+<td>Mriežka produktov z jednej kolekcie</td>
+<td>kolekcia, počet produktov</td>
+</tr>
+<tr>
+<td>Stories</td>
+<td>Krátke príbehy s fotkou, textom a odkazom na produkt</td>
+<td>obálka a príbehy</td>
+</tr>
+<tr>
+<td>Shop the look</td>
+<td>Jedna fotka s produktmi</td>
+<td>fotka, produkty</td>
+</tr>
+<tr>
+<td>Featured blog / Journal</td>
+<td>Posledné články alebo obálka</td>
+<td>blog, fotka obálky, texty</td>
+</tr>
+<tr>
+<td>Contact form</td>
+<td>Kontaktný formulár s témami a riadkami info</td>
+<td>témy, ďalšie polia, riadky (adresa, hodiny, ...)</td>
+</tr>
+<tr>
+<td>Sale countdown</td>
+<td>Odpočet v záložke Sale alebo stále</td>
+<td>text, dátum konca alebo hodiny</td>
+</tr>
+<tr>
+<td>Newsletter</td>
+<td>Prihlásenie na email</td>
+<td>nadpis, text</td>
+</tr>
+<tr>
+<td>Ostatné</td>
+<td>Rich text, Image with text, Multicolumn, Multirow, Collage, Video, FAQ (Collapsible content), Custom Liquid, Apps</td>
+<td>štandardné možnosti</td>
+</tr>
+</tbody>
+</table>
+<p>Zmazanie sekcie: klikni na ňu v editore → dole v jej nastaveniach <strong>Odstrániť sekciu</strong> (alebo ju skry ikonou oka). Zmazanie dlaždice alebo bloku: klikni na ňu → <strong>Odstrániť blok</strong>.</p>
+<h2 id="5-kolekcie">5. Kolekcie</h2>
+<ul>
+<li><strong>Vytvorenie:</strong> Produkty → Kolekcie → Vytvoriť kolekciu. Najlepšie <em>Automatická</em> s podmienkou „Tag produktu sa rovná …" (napr. <code>fall-2026</code>). Keď produktu pridáš tento tag, dostane sa do kolekcie.</li>
+<li><strong>Zobrazenie v obchode:</strong> dlaždica (sekcia Collection picker), položka menu (Obsah → Ponuky), menu Kolekcia v hlavičke (nižšie), Product tabs, Featured collection.</li>
+<li><strong>Stránka kolekcie:</strong> filtre a triedenie zabezpečuje aplikácia Search &amp; Discovery (časť 8). Fotku kolekcie možno zapnúť alebo vypnúť v šablóne kolekcie.</li>
+</ul>
+<h3 id="menu-kolekcia-v-hlavicke">Menu „Kolekcia" v hlavičke</h3>
+<ul>
+<li>Prvá záložka: Upraviť tému → Hlavička → Collection menu (názov, kolekcia alebo tag, odkaz „zobraziť všetko").</li>
+<li>Druhá záložka: Upraviť tému → Nastavenia témy → <strong>Collection menu: second tab</strong> (zobraziť/skryť, názov, kolekcia alebo tag).</li>
+<li>Kliknutie na názov záložky otvorí stránku kolekcie. Na mobile sú tie isté záložky v menu.</li>
+</ul>
+<h2 id="6-produkty">6. Produkty</h2>
+<ul>
+<li><strong>Možnosti:</strong> daj <strong>Farbu</strong> ako prvú a <strong>Veľkosť</strong> ako druhú. Keď zákazník vyberie farbu, veľkosti, ktoré nie sú pre túto farbu na sklade, sú preškrtnuté.</li>
+<li><strong>Sklad:</strong> pri každom variante zapni <em>Sledovať množstvo</em>, vypni <em>Pokračovať v predaji pri vypredaní</em> a nastav množstvo pre lokalitu.</li>
+<li><strong>Fotky pre farby:</strong> nahraj fotky a každej farbe priraď fotku. Po výbere farby sa zmení hlavná fotka.</li>
+<li><strong>Typ produktu:</strong> nastav ho (napr. Oblek, Taška, Topánky). Podľa neho sa vyberie tabuľka veľkostí.</li>
+<li><strong>Tabuľka veľkostí:</strong> Upraviť tému → stránka Produkt → blok Size guide. Vyber stránku s vlastným návodom alebo vstavané tabuľky (riadky na nový riadok, bunky oddelené <code>|</code>; môžeš ju skryť pre niektoré typy produktov).</li>
+<li><strong>Zľava:</strong> vyplň „Pôvodná cena". Zľavnené ceny sú červené s odznakom Sale.</li>
+<li><strong>Tagy:</strong> <code>women</code> a <code>men</code> riadia prepínač Ženy / Muži (unisex produkty majú oba).</li>
+</ul>
+<h2 id="7-prepinac-zeny-muzi">7. Prepínač Ženy / Muži</h2>
+<p>Nastavenia témy → Women / Men switch: zapnúť/vypnúť, názvy dvoch tagov a stránky, kde sa tlačidlo skryje (handle kolekcií alebo typy produktov oddelené čiarkou).</p>
+<h2 id="8-filtre-a-vyhladavanie">8. Filtre a vyhľadávanie</h2>
+<p>Nainštaluj bezplatnú aplikáciu <strong>Search &amp; Discovery</strong> → Filtre → pridaj Dostupnosť, Cenu, Veľkosť, Farbu, Typ produktu atď. Filtre sa zobrazia na stránkach kolekcie a vyhľadávania. Prediktívne vyhľadávanie: Nastavenia témy → Search.</p>
+<h2 id="9-jazyky-a-preklady">9. Jazyky a preklady</h2>
+<ul>
+<li>Nastavenia → Jazyky: pridaj jazyk. Offcut obsahuje angličtinu, slovenčinu, češtinu, nemčinu, francúzštinu, taliančinu a španielčinu; ostatné jazyky použijú angličtinu.</li>
+<li>Vlastné texty (sekcie, produkty, menu) sa prekladajú v aplikácii <strong>Translate &amp; Adapt</strong>.</li>
+<li>Ukážkové texty v téme (kontakt, príbehy, žurnál) sa v 7 jazykoch prekladajú automaticky <strong>len kým ich nezmeníš</strong>. Po zmene preložíš nový text v Translate &amp; Adapt.</li>
+</ul>
+<h2 id="10-dalsie-nastavenia">10. Ďalšie nastavenia</h2>
+<ul>
+<li><strong>Uvítacie okno krajiny:</strong> Nastavenia témy → Country welcome window.</li>
+<li><strong>Sale:</strong> Nastavenia témy → Sale (kolekcia so zľavami; červený odkaz Sale v hlavičke).</li>
+<li><strong>Košík:</strong> Nastavenia témy → Cart (okno alebo stránka, predajca, poznámka).</li>
+<li><strong>Sociálne siete:</strong> Nastavenia témy → Social media. <strong>Odznaky, Karty, Tlačidlá, Polia, Rozloženie, Animácie:</strong> príslušné skupiny v nastaveniach témy.</li>
+</ul>
+<h2 id="11-riesenie-problemov">11. Riešenie problémov</h2>
+<ul>
+<li><em>Hlavička je prázdna:</em> skontroluj, či má sekcia Hlavička logo alebo názov obchodu a vybrané menu.</li>
+<li><em>Dlaždica bez fotky:</em> ukážkové fotky sa zobrazujú len pri ukážkových produktoch. Nahraj vlastnú fotku.</li>
+<li><em>Veľkosti nie sú preškrtnuté:</em> pozri časť 6 (najprv Farba, sledovanie množstva zapnuté, pokračovanie v predaji vypnuté).</li>
+<li><em>Kolekcia chýba v menu Kolekcia:</em> musí obsahovať produkty; skontroluj jej handle alebo tag.</li>
+<li><em>Text nie je preložený:</em> pozri časť 9.</li>
+</ul>
+<h2 id="12-podpora">12. Podpora</h2>
+<p>Odkaz na podporu je v Nastaveniach témy → informácie o téme. Odpovedáme do 2 pracovných dní.</p>
+<h2 id="13-podakovanie">13. Poďakovanie</h2>
+<p>Vychádza z témy Dawn od Shopify (MIT). Písma: Jost a Inter cez Shopify. Fotky v ukážke sú len demonštračné; nahraď ich vlastnými.</p></div>
+</main>
+<script>
+document.querySelectorAll('nav button').forEach(function(b){b.addEventListener('click',function(){
+var l=b.dataset.l;document.getElementById('en').hidden=l!=='en';document.getElementById('sk').hidden=l!=='sk';
+document.querySelectorAll('nav button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});document.documentElement.lang=l;})});
+</script></body></html>
